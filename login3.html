@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            background-image: url(https://img.freepik.com/premium-photo/abstract-blurred-gradient-fluid-gradient-background-design-wallpaper-template_558873-18135.jpg?semt=ais_hybrid);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .login {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px auto;
+            display: block;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #04081e;
+            outline: none;
+        }
+
+        button {
+            background-color: #04081e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+
+        button:hover {
+            background-color: #3e4152;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        .back-home {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>BLOGHAVEN</h1>
+    </header>
+    <div class="login">
+        <h1><b>LOGIN PAGE</b></h1>
+        <form action="/action.php" method="post">
+            <input type="text" id="username" name="username" placeholder="Enter username" required>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            
+            <a href="post.html"><button id="submit" type="button">Submit</button></a>
+            <a href="reset.html"><button id="reset" type="button">Reset Passowrd</button></a>
+            
+        </form>
+        <div class="back-home">
+            <a href="main.html">Back to home</a>
+        </div>
+    </div>
+</body>
+
+</html>
+

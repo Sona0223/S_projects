@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            background-image: url(https://img.freepik.com/premium-photo/abstract-blurred-gradient-fluid-gradient-background-design-wallpaper-template_558873-18135.jpg?semt=ais_hybrid);
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .reset-container {
+            background-color: white;
+            padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .reset-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .reset-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .reset-container button {
+            background-color: #5c6bc0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .reset-container button:hover {
+            background-color: #2d3a90;
+        }
+
+        .reset-container a {
+            display: block;
+            margin-top: 15px;
+            color: #5c6bc0;
+            text-decoration: none;
+        }
+
+        .reset-container a:hover {
+            text-decoration: underline;
+        }
+
+        /* Accessibility Styles */
+        input:focus, button:focus {
+            outline: 2px solid #5c6bc0;
+            outline-offset: 4px;
+        }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 600px) {
+            .reset-container {
+                padding: 20px;
+            }
+
+            .reset-container h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>BLOGHAVEN</h1>
+    </header>
+    <div class="reset-container">
+        <h2>Reset Password</h2>
+        <form>
+            <input type="password" id="newPassword" placeholder="Enter New Password" required aria-label="New Password" aria-describedby="newPasswordHelp">
+            <div id="newPasswordHelp" style="font-size: 12px; color: #888;">Your password must be at least 8 characters long.</div>
+            <input type="password" id="confirmPassword" placeholder="Confirm New Password" required aria-label="Confirm Password">
+            <button type="submit">Reset Password</button>
+        </form>
+        <a href="login3.html">Back to Login</a>
+    </div>
+</body>
+
+</html>
+

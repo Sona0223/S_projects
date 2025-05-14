@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogHaven</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://wallpapers.com/images/hd/powerpoint-blue-background-gnn1qhup7xpah8fy.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header {
+            background: linear-gradient(90deg, #4b79a1, #283e51);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #222;
+            padding: 10px 0;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        .nav-link {
+            color: #87c3e1;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-link:hover {
+            color: white;
+            background-color: #444;
+            border-radius: 5px;
+        }
+
+        .cont {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 2s ease-out;
+        }
+
+        button {
+            background-color: #f41f1f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #283e51;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        .blog-item {
+            width: 250px;
+            padding: 15px;
+            background-color: #e8f7ff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .blog-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .blog-item h3 {
+            color: #333;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer ul {
+            list-style-type: none;
+        }
+
+        footer li {
+            margin-bottom: 10px;
+        }
+
+        footer .link a {
+            color: cadetblue;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .link a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        @media screen and (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .blog-item {
+                width: 90%;
+            }
+
+            .nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BLOGHAVEN</h1> 
+    </header>
+
+    <nav class="nav"> 
+        <a href="#home" class="nav-link">HOME</a>
+        <a href="#about" class="nav-link">BLOGS</a>
+        <a href="registration.html" class="nav-link">REGISTRATION</a>
+        <a href="login3.html" class="nav-link">LOGIN PAGE</a>
+        <a href="contact.html" class="nav-link">CONTACT FORM</a>
+    </nav>
+
+    <section class="image" style="padding: 20px; background-image: url('https://wallpapers.com/images/hd/powerpoint-blue-background-gnn1qhup7xpah8fy.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;  ">
+        <div class="cont" id="home" style="max-width: 700px; margin: 0 auto; text-align: center;">
+            <img src="data:image/png;base64,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" alt="BlogHaven Community" style="width: 100%; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            
+            <h2 style="font-size: 2.5em; color: #333; margin-bottom: 15px; font-family: 'Arial', sans-serif;">Welcome to BlogHaven!</h2>
+            <p style="font-size: 1.2em; color: #555; line-height: 1.8; margin-bottom: 20px; font-family: 'Verdana', sans-serif;">
+                BlogHaven is the perfect platform for anyone who dreams of publishing their own blog and connecting with a community of passionate writers and readers. Here, you can write, share your thoughts, and receive valuable feedback to grow as a blogger.
+            </p>
+            
+            <div style="text-align: left; background: #22342d; padding: 25px; border-radius: 12px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+                <h3 style="color: #007bff; margin-bottom: 15px; font-family: 'Georgia', serif;">Why Join BlogHaven?</h3>
+                <ul style="font-size: 1.1em; color: #afc5c7; line-height: 1.8; list-style: disc; padding-left: 20px;">
+                    <li><strong>Sign Up in Seconds:</strong> Get started quickly and easily with no complex sign-up forms.</li>
+                    <li><strong>Publish Your Blog:</strong> Share your ideas with the world and gain visibility.</li>
+                    <li><strong>Engage with the Community:</strong> Interact with fellow bloggers and exchange ideas.</li>
+                    <li><strong>Receive Feedback:</strong> Get constructive feedback to improve your writing.</li>
+                    <li><strong>Personalize Your Space:</strong> Customize your profile and blogs to reflect your unique style.</li>
+                </ul>
+            </div>
+            
+            <p style="font-size: 1.2em; color: #555; line-height: 1.8; margin-bottom: 20px; font-family: 'Verdana', sans-serif;">
+                Whether you’re a seasoned writer or just starting out, BlogHaven provides all the tools you need to bring your ideas to life.
+            </p>
+        </div>
+        <center><a href="post.html"><button type="button">Create your blog</button></a></center>
+    </section>
+    
+    
+        
+
+        <div class="content" id="about">  
+            <div class="blog-item" id="a">
+                <a href="travel.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjkOGH_m4rht4T8gBAo14MzA4VktposEwoaw&s" alt="Blog 1" class="blog-img">
+                </a>
+                <h3>TRAVEL BLOGS</h3>
+            </div>
+            <div class="blog-item" id="b">
+                <a href="cook.html">
+                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjkOGH_m4rht4T8gBAo14MzA4VktposEwoaw&s" alt="Blog 2" class="blog-img">
+                </a>
+                <h3>COOKING BLOGS</h3>
+            </div>
+            <div class="blog-item" id="x">
+                <a href="tech.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjkOGH_m4rht4T8gBAo14MzA4VktposEwoaw&s" alt="Blog 3" class="blog-img">
+                </a>
+                <h3>TECHNICAL BLOGS</h3>
+            </div>
+            <div class="blog-item" id="y">
+                <a href="sports.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjkOGH_m4rht4T8gBAo14MzA4VktposEwoaw&s" alt="Blog 4" class="blog-img">
+                </a>
+                <h3>SPORTS BLOG</h3>
+            </div>
+        </div>
+        <br>
+        <div class="content" id="about">  
+            <div class="blog-item" id="a">
+                <a href="travel.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjkOGH_m4rht4T8gBAo14MzA4VktposEwoaw&s" alt="Blog 1" class="blog-img">
+                </a>
+                <h3>PERSONAL BLOGS</h3>
+            </div>
+            <div class="blog-item" id="b">
+                <a href="cook.html">
+                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjkOGH_m4rht4T8gBAo14MzA4VktposEwoaw&s" alt="Blog 2" class="blog-img">
+                </a>
+                <h3>BUSINESS BLOGS</h3>
+            </div>
+            <div class="blog-item" id="x">
+                <a href="tech.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjkOGH_m4rht4T8gBAo14MzA4VktposEwoaw&s" alt="Blog 3" class="blog-img">
+                </a>
+                <h3>HEALTH BLOGS</h3>
+            </div>
+            <div class="blog-item" id="y">
+                <a href="sports.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjkOGH_m4rht4T8gBAo14MzA4VktposEwoaw&s" alt="Blog 4" class="blog-img">
+                </a>
+                <h3>FASHION BLOG</h3>
+            </div>
+        </div>
+        
+    </section>
+
+    <footer id="contact">
+        <h2>CONTACT US</h2>
+        <p>
+            We'd love to hear from you! Whether you have questions, feedback, or need support, feel free to reach out to us through the following channels:
+        </p>
+        <ul>
+            <li><strong>General Inquiries:</strong> <br> 📧 Email: info@example.com | 📞 Phone: +1 (123) 456-7890</li>
+            <li><strong>Customer Support:</strong> <br> 📧 Email: support@example.com | 📞 Phone: +1 (123) 555-6789</li>
+            <li><strong>Social Media:</strong><br>
+                <ul>
+                    <li class="link"><a href="https://www.facebook.com/"><img src="logo-facebook.svg" alt="facebook" height="35px"></a></li>
+                    <li class="link"><a href="https://www.facebook.com/TwitterInc/"><img src="logo-twitter.svg" alt="twitter" height="35px"></a></li>
+                    <li class="link"><a href="https://www.instagram.com/"><img src="logo-instagram.svg" alt="instagram" height="35px"></a></li>
+                </ul>
+            </li>
+            <li><strong>Address</strong
+
