@@ -40,6 +40,6 @@ public class Test extends FileOperations {
         test.writeToFile(fileName, content);
 
         // Read from the file
-        test.readFromFile(fileName); 
+        test.readFromFile(fileName);
     }
 }
