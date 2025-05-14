@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Blog Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            background-image: url(https://img.freepik.com/premium-photo/abstract-blurred-gradient-fluid-gradient-background-design-wallpaper-template_558873-18135.jpg?semt=ais_hybrid); 
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #5c6bc0;
+            outline: none;
+        }
+
+        button {
+            background-color: #5c6bc0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2d3a90;
+        }
+
+        .blog-post {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e3f2fd;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-post h3 {
+            margin: 0;
+            color: #1a237e;
+        }
+
+        .blog-post p {
+            color: #333;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            input[type="text"], textarea {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>BLOGHAVEN</h1>
+</header>
+
+<div class="container">
+    <h2>Create Your Blogs</h2>
+    <form id="blogForm">
+        <input type="text" id="title" placeholder="Enter blog title" aria-label="Blog title" required>
+        <textarea id="content" rows="5" placeholder="Write your blog content here..." aria-label="Blog content" required></textarea>
+        <center><button type="submit">Publish Blog</button></center>
+        <center><a href="main.html">Back to home</a></center>
+    </form>
+</div>
+
+</body>
+</html>
